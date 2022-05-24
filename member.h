@@ -10,6 +10,8 @@ public:
     bag();
     ~bag();
     QString send();
+    QString send(int f);
+    char checkm();
 private:
     char name[100];
     time_t t;

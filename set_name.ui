@@ -89,7 +89,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>CheckBox</string>
+    <string>AI模式</string>
    </property>
   </widget>
  </widget>

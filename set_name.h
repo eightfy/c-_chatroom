@@ -7,7 +7,7 @@ namespace Ui {
 class set_name;
 }
 
-class set_name : public QWidget
+class set_name : private QWidget
 {
     Q_OBJECT
 
@@ -16,7 +16,7 @@ public:
     explicit set_name(QWidget *parent = nullptr);
     ~set_name();
     int check();
-
+    void showw();
 private slots:
     void on_quit1_clicked();
 

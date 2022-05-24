@@ -44,3 +44,8 @@ void set_name::on_checkBox_stateChanged(int arg1)
     mode = 4;
 }
 
+void set_name::showw()
+{
+    this->show();
+}
+

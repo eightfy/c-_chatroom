@@ -37,4 +37,24 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icon.qrc
+    icon.qrc \
+    monaka/monaka.qrc
+
+DISTFILES += \
+    monaka/cry.png \
+    monaka/die.png \
+    monaka/hhh.png \
+    monaka/miao.png \
+    monaka/mua.png \
+    monaka/nice.png \
+    monaka/run.png \
+    monaka/xixi.png \
+    monaka/zzz.png \
+    monaka/呜呜呜.png \
+    monaka/呼呼.png \
+    monaka/咧嘴.png \
+    monaka/喵.png \
+    monaka/嘲笑.png \
+    monaka/好耶.png \
+    monaka/撬棍.png \
+    monaka/轰.png

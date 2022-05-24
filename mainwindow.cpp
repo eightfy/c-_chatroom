@@ -19,7 +19,14 @@ MainWindow::MainWindow(QWidget *parent, int m) :
 {
     ui->setupUi(this);
     setWindowIcon(QIcon(":/app.ico"));
+    ui->comboBox->setIconSize(QSize(100,100));
     mode = m;
+    QString html = "<div style=\"height=10\"> \n"
+         "<img src=:/app.ico > \n"
+    "</div>";
+    //ui->textBrowser->insertHtml(html);
+    //ui->textBrowser->insertPlainText("\n");
+    //insimg(":/hhh.png");
 }
 
 MainWindow::~MainWindow()
@@ -68,4 +75,25 @@ void MainWindow::send(QString m)
     ui->textBrowser->insertPlainText(m);
     ui->textBrowser->insertPlainText("\n");
     ui->textBrowser->moveCursor(QTextCursor::End);
+}
+
+void MainWindow::send(QString m, int f)
+{
+    ui->textBrowser->insertPlainText(m);
+    //ui->textBrowser->insertPlainText("\n");
+    ui->textBrowser->moveCursor(QTextCursor::End);
+}
+
+void path2html(QString &path)
+{
+   path = QString("<img src=\"%1\" width='100'/>").arg(path);
+   return;
+}
+
+void MainWindow::insimg(QString path)
+{
+    path2html(path);
+    ui->textBrowser->insertHtml(path);
+    ui->textBrowser->insertPlainText("\n");
+    return;
 }

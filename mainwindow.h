@@ -18,8 +18,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr, int m = 0);
     ~MainWindow();
     void send(QString m);
+    void send(QString m, int f);
+    void insimg(QString path);
     SOCKET sclient;
     QString name;
+
 
 private slots:
     void on_pushButton_2_clicked();

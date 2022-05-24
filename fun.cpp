@@ -28,6 +28,23 @@ QString bag::send()
     return m1+m0+m2+m3+m4;
 }
 
+QString bag::send(int f)
+{
+    QString m1{ctime(&t)};
+    QString m0{" "};
+    QString m2 = QString::fromLocal8Bit(name);
+    QString m3 = ":\t";
+    return m1+m0+m2+m3;
+}
+
+char bag::checkm()
+{
+    if(message[0] == '/'  && message[2] == '/' )
+        return message[1];
+    else
+        return 'e';
+}
+
 DWORD _stdcall draw(LPVOID x)
 {
     long long int* trans = (long long int*)x;
@@ -40,6 +57,17 @@ DWORD _stdcall draw(LPVOID x)
         int re = recv(sclient, (char*)rec, sizeof(bag), 0);
         if (re == 1112)
         {
+            char file = rec->checkm();
+            if(file != 'e')
+            {
+                QString m = rec->send(1);
+                QMetaObject::invokeMethod(w, [w, m]{
+                w->send(m,1);});
+                QString path = QString(":/%1.png").arg(file);
+                QMetaObject::invokeMethod(w, [w, path]{
+                w->insimg(path);});
+                continue;
+            }
             QString m = rec->send();
             QMetaObject::invokeMethod(w, [w, m]{
             w->send(m);});
@@ -70,3 +98,4 @@ DWORD _stdcall ai(LPVOID x)
     }
     return 0;
 }
+

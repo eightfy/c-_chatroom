@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int port = PORT;
     QApplication qtn(argc, argv);
     set_name wn;
-    wn.show();
+    wn.showw();
     qtn.exec();
     if(wn.check() == 4)
         port = AI_PORT;

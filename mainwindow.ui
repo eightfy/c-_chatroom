@@ -60,6 +60,111 @@
      <string>退出</string>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>390</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string notr="true">发送表情</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/0.png</normaloff>:/0.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/1.png</normaloff>:/1.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/2.png</normaloff>:/2.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/3.png</normaloff>:/3.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/4.png</normaloff>:/4.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/5.png</normaloff>:/5.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/6.png</normaloff>:/6.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/7.png</normaloff>:/7.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/8.png</normaloff>:/8.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="monaka/monaka.qrc">
+       <normaloff>:/9.png</normaloff>:/9.png</iconset>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -73,6 +178,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="monaka/monaka.qrc"/>
+ </resources>
  <connections/>
 </ui>
