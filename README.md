@@ -24,4 +24,17 @@ char ip[] = "xxx.xx.xx.xxx";
 3.编译聊天室  
 3.进入聊天室  
 ## tip
-1.一次在线人数限制为十人，可在后端中更改 
+1.一次在线人数限制为十人，可在后端中[更改](https://github.com/eightfy/chatroom_serve/blob/master/fun.cpp)  
+```c
+int list(int* arg, int sClient, int flag)
+{
+    if (flag) {
+        ...
+        cout << "当前连接数" << j << endl;
+        if (i == 10) {  #可以自由设置
+            cout << "连接已满" << endl;
+            return -1;
+        }
+        return 0;
+    }
+```
