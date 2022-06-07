@@ -13,7 +13,13 @@
 环境：Qt6.2.4，QTCreator 7.0.0  
 表情包来自：[桃井最中Monaka](https://space.bilibili.com/692437895/)  
 ## 使用
-1。使用服务器域名代替源码中的xxx.xxx.xxx.xx  
+1。将ip、port更改为自己的服务器设置  
+```c
+#define PORT 8888
+#define AI_PORT 8000
+#define QUEUE 20
+char ip[] = "xxx.xx.xx.xxx";
+```
 2.按上面所述部署后端  
 3.编译聊天室  
 3.进入聊天室  
